@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -34,10 +35,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
- 
-   justify-content: center;
-
-  
+  justify-content: center;
 }
 
 .ServicesGrid > * {
@@ -46,13 +44,11 @@ body {
   padding: 1rem;
 }
 
-
 .our-process {
   padding: 1rem;
   margin-bottom: 2rem;
   margin-top: 0.1rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex; /* Use flexbox for horizontal layout */
   align-items: center; /* Center items vertically */
 }
@@ -63,24 +59,38 @@ body {
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for visual depth */
   margin-right: 10px; /* Margin between video and process sections */
+  position: sticky; /* Make video sticky */
+  top: 10px; /* Adjust the top position as needed */
+  padding-left: 5rem;
 }
 
 .processes {
   flex: 1; /* Allow the processes section to expand and fill remaining space */
-  padding: 20px;
+  padding: 10px;
+  padding-right: 5rem;
+  padding-left: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center content vertically */
-  
+}
+
+.processes > * {
+  padding: 20px 0; /* Add padding to top and bottom of each process section */
+  display: flex;
+  align-items: center;
+  border-top: 1px solid white; /* Add top border to each process section */
+}
+
+.processes > *:first-child {
+  border-top: none; /* Remove top border from the first process section */
 }
 
 .Title {
   font-weight: 500;
   font-size: 3rem;
   text-align: left;
-  margin-left: 4rem;
+  margin-left: 5rem;
   color: white;
-
 }
 
 .text {
@@ -88,21 +98,20 @@ body {
   text-align: center;
   padding: 30px;
   font-size: 2.1rem;
-  
 }
+
 .description-video {
   width: 100%;
-  max-width: 1100px; /* Increase max-width as needed */
+  max-width: 1100px;
   height: auto;
   display: block;
-  margin: 0 auto; /* Center horizontally */
+  margin: 0 auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-  position: relative; /* Needed for positioning the button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-
-.pause-button  {
+.pause-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -122,13 +131,13 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.mute-button{
+.mute-button {
   position: absolute;
   bottom: 17px;
   right: 13rem;
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
-  padding: 10px; 
+  padding: 10px;
   border-radius: 50%;
   cursor: pointer;
   z-index: 10;
@@ -141,8 +150,177 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-
 .branding-description {
-
   padding: 20px;
+}
+
+.FAQ {
+  padding-top: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 3rem;
+}
+
+/* More specific selectors to override existing styles */
+ .view-all-services-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 4rem;
+} 
+
+.custom-button {
+  color: black;
+  background-color: white;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 100%; /* Make the button fill the height of the container */
+}
+
+.custom-button:hover {
+  background-color: violet;
+  color: white;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensure content is centered within the button */
+}
+
+.button-content .text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Styling for the new section */
+/* New Section */
+.new-section {
+  display: flex;
+  justify-content: center; /* Center the section container */
+  margin-top: 50px;
+  padding: 40px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.section-container {
+  display: flex;
+  width: 100%;
+  max-width: fit-content; /* Set a max width for the section */
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.text-and-images, .form-container {
+  flex: 1;
+  padding: 20px;
+}
+
+.text-and-images {
+  border-right: 1px solid #ccc; /* Border between sections */
+}
+
+.text-and-images .text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.text-and-images .text .heading {
+  font-size: 64px; /* Increase font size for heading */
+   /* Make heading bold */
+   text-align: justify;
+}
+
+.text-and-images .text .descrip {
+  font-size: 22px; /* Decrease font size for description */
+ text-align: justify;
+}
+
+.text-and-images .images {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: center; /* Center items horizontally */
+  margin-left: 8rem;
+}
+
+.text-and-images .images img {
+  width: 100px; /* Adjust image size */
+  height: 100px; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make image circular */
+}
+
+.images .name .p {
+  font-size: 14px; /* Font size for names */
+  text-align: center;
+  text-align: justify;
+}
+
+
+.images .name a {
+  display: block;
+  margin-top: 5px; /* Adjust spacing between links */
+  color: black; /* Link color */
+  text-decoration: underline; /* Underline links */
+}
+
+.images .name a:hover {
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-section label {
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-section label span {
+  color: red;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .new-section {
+    flex-direction: column;
+  }
+
+  .section-container {
+    flex-direction: column;
+  }
+
+  .text-and-images {
+    border-right: none; /* Remove border on small screens */
+    border-bottom: 1px solid #ccc; /* Add border at bottom for separation */
+  }
+
+  .text-and-images .images img {
+    width: 100%;
+  }
+}
+
+.submit-button{
+  margin-right: 2rem;
 }

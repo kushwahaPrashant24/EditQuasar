@@ -1,17 +1,18 @@
 .our-service {
- padding: 0.7rem;
-  background-color: #f8f9fa;
-  /* margin-bottom: 2rem; */
-  /* border-radius: 8px; */
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  border-bottom: 0.73rem;
-  border-color: rgba(0, 0, 0, 0.758);
-  border-width: 0.1rem;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  height: 6rem; /* Adjust height as needed */
+  border-bottom: 1px solid white; /* Add border-bottom to separate sections */
 }
-
 
 .service-description {
   flex: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
 }
 
 .title {
@@ -19,10 +20,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: rgba(0, 0, 0, 0.71);
+  color: white;
   font: normal;
 }
-.title:hover{
+
+.title:hover {
   margin-left: 2rem;
   transition: 0.3s ease;
 }
@@ -31,7 +33,7 @@
   background: none;
   border: none;
   font-size: 1.5rem;
-  margin-left: 10px;  
+  margin-left: 10px;
   cursor: pointer;
 }
 
@@ -39,10 +41,11 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.1s ease-out, padding 0.1s ease-out;
+  color: white;
 }
 
 .description.open {
-  max-height: 200px; /* Adjust this value based on your content's height */
+  max-height: 200px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -53,9 +56,9 @@
 }
 
 .title.active {
-  color: #007bff; /* Change color when active */
+  color: #007bff;
 }
 
 .title.active + .description {
-  display: block; /* Show description when active */
+  display: block;
 }
